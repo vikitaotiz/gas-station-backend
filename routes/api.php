@@ -24,4 +24,5 @@ Route::get('/user', 'AuthController@user')->middleware('auth:api');
 Route::apiResource('/roles', 'RoleController')->middleware('auth:api');
 
 Route::apiResource('/product_categories', 'ProductCategoriesController')->middleware('auth:api');
-Route::apiResource('/products', 'ProductsController')->middleware('auth:api');
+Route::apiResource('/products', 'ProductsController')-> middleware('auth:api');
+Route::apiResource('/measurements', 'MeasurementsController')->middleware('auth:api');
